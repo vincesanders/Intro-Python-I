@@ -19,11 +19,10 @@ f.close()
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
-f = open('src/bar.txt', 'w')
+f = open('src/bar.txt', 'r+')
 f.write('This is the first line\n')
 f.write('This is the second line\n')
 f.write('This is the third line\n')
-f.close()
-f = open('src/bar.txt')
+f.seek(0)
 print(f.read())
 f.close()
